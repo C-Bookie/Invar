@@ -1,0 +1,15 @@
+[build-system]
+requires = ["maturin"]
+build-backend = "maturin"
+
+[project]
+name = "invar"
+version = "0.1.0"
+authors = ["C_Bookie"]
+description = "A Python package with Rust bindings."
+readme = "README.md"
+license = "MIT"
+dependencies = []
+
+[tool.maturin]
+rust-crate = "invar"
