@@ -18,15 +18,22 @@ install_dev: setup
 	@pip install pre-commit
 	@pre-commit install
 
+.PHONY: build
+build:
+	@echo "Building Rust library..."
+	@cargo build
+
+.PHONY: test
+test: build
+	@echo "Running Python tests..."
+	@pytest
+	@echo "Running Rust tests..."
+	@cargo test
+
 .PHONY: lint
 lint:
 	@echo "Running pre-commit hooks..."
 	@pre-commit run --all-files
-
-.PHONY: test
-test:
-	@echo "Running tests..."
-	@pytest
 
 .PHONY: run
 run:
