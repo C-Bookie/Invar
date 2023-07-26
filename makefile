@@ -20,8 +20,8 @@ install_dev: setup
 
 .PHONY: build
 build:
-	@echo "Building Rust library..."
-	@cargo build
+	@echo "Building Rust library with Maturin..."
+	@maturin develop
 
 .PHONY: test
 test: build
@@ -38,4 +38,5 @@ lint:
 .PHONY: run
 run:
 	@echo "Running the project..."
-	@python main.py
+	@python -m invar
+

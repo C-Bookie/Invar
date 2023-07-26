@@ -1,16 +1,15 @@
 [build-system]
-requires = ["maturin"]
+requires = ["maturin>=1.0,<2.0"]
 build-backend = "maturin"
 
 [project]
 name = "invar"
 version = "0.1.0"
-authors = ["C_Bookie"]
-repository = "https://github.com/C-Bookie/Invar"
-description = "A Python package with Rust bindings."
+authors = ["C_Bookie <duck-vader@hotmail.co.uk>"]
+description = "Your project description"
 readme = "README.md"
 license = "MIT"
-dependencies = []
+repository = "https://github.com/C-Bookie/Invar"
 
 [tool.maturin]
-rust-crate = "invar"
+bindings = "pyo3"
