@@ -20,4 +20,5 @@ venv/
 .vscode/
 *.swp
 *.swo
+*.iml
 

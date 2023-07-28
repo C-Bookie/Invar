@@ -1,7 +1,11 @@
 [package]
-name = "invar"
+name = "invar_rs"
 version = "0.1.0"
-edition = "2023"
+edition = "2021"
 
 [dependencies]
-pyo3 = { version = "0.15", features = ["extension-module"] }
+pyo3 = { version = "0.19.1", features = ["extension-module"] }
+
+[lib]
+name = "invar_rs"
+crate-type = ["cdylib"]

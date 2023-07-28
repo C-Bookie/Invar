@@ -1,13 +1,10 @@
-pub fn hello_world() -> &'static str {
-    "Hello, World!"
-}
+use pyo3::prelude::*;
 
-#[cfg(test)]
-mod tests {
-    use super::*;
-
-    #[test]
-    fn it_works() {
-        assert_eq!(hello_world(), "Hello, World!");
+#[pymodule]
+fn invar_rs(_py: Python, m: &PyModule) -> PyResult<()> {
+    #[pyfn(m)]
+    fn hello_world(_py: Python) -> PyResult<&'static str> {
+        Ok("Hello, World!!!")
     }
+    Ok(())
 }
